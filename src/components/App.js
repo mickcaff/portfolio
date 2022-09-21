@@ -1,5 +1,4 @@
 import '../css/App.css';
-import {link} from "react-router-dom"
 
 function App() {
   return (
