@@ -4,8 +4,8 @@ import {link} from "react-router-dom"
 function App() {
   return (
     <div className="App">
-      <h1>React Portfolio</h1>
-      <h1>Under Construction</h1>
+      <h1>Portfolio</h1><br />
+      <h2>Under Construction</h2><br />
       <p>Regards, Mick</p><br/>
       <p>---</p><br/>
       <a href="https://www.linkedin.com/in/mcaffery/" rel='noreferrer' target="__blank" >LinkedIn</a><br/><br/>
