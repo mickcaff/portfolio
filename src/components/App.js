@@ -6,6 +6,7 @@ function App() {
       <h1>Portfolio</h1><br />
       <h2>Under Construction</h2><br />
       <p>Regards, Mick</p><br/><br />
+      <p>Testing builds are stopped</p><br/><br />
       <p>---</p><br/>
       <a href="https://www.linkedin.com/in/mcaffery/" rel='noreferrer' target="__blank" >LinkedIn</a><br/><br/>
       <a href="https://github.com/mickcaff" rel='noreferrer' target="__blank">GitHub</a><br/><br/>
