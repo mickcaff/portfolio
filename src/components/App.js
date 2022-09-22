@@ -3,14 +3,13 @@ import '../css/App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Portfolio</h1><br />
-      <h2>Under Construction</h2><br />
+      <i class="fa-solid fa-2xl fa-person-digging"></i>    
+      <h2>Portfolio Under Construction</h2><br />
       <p>Regards, Mick</p><br/><br />
-      <p>Testing builds are stopped</p><br/><br />
-      <p>---</p><br/>
-      <a href="https://www.linkedin.com/in/mcaffery/" rel='noreferrer' target="__blank" >LinkedIn</a><br/><br/>
-      <a href="https://github.com/mickcaff" rel='noreferrer' target="__blank">GitHub</a><br/><br/>
-      {/* <a href="/resume.pdf" target="___blank">Resume</a> */}
+      <div className='social-links'>
+        <a href="https://www.linkedin.com/in/mcaffery/" rel='noreferrer' target="__blank" >LinkedIn</a>
+        <a href="https://github.com/mickcaff" rel='noreferrer' target="__blank">GitHub</a>
+      </div>
     </div>
   );
 }
