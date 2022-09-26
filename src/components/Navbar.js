@@ -15,11 +15,11 @@ function Navbar() {
         <NavLink className="navbar-navlink" to="/portfolio">
           Portfolio
         </NavLink>
-        {/* <div className="socials-div">
+        <div className="socials-div">
           <i class="socials-icon fa-brands fa-lg fa-linkedin"></i>
-          <i class="socials-icon fa-regular fa-lg fa-square"></i>
+          {/* <i class="socials-icon fa-regular fa-lg fa-square"></i> */}
           <i class="socials-icon fa-brands fa-lg fa-square-github"></i>
-        </div> */}
+        </div>
       </div>
     </nav>
   );
