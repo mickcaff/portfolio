@@ -1,9 +1,19 @@
 import React from 'react'
+import Project from './Project.js'
+import {projects} from '../data/projects.js'
 
 function Portfolio() {
+
   return (
-    <div>
-      <h1>Portfolio</h1>
+    <div className="folio-main">
+      <h1>My Recent Work</h1>
+      <div>
+        {projects.map((project, index) => {
+          return(
+            <Project key={index} {...project} />
+          )
+        })}
+      </div>
     </div>
   )
 }
