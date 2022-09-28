@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SkillsTable from "./SkillsTable";
 import SkillsAccordian from "./SkillsAccordian";
+import { aboutMyself } from "../data/about";
 import { useViewport } from "../hooks/useViewport";
 
 function About() {
@@ -76,9 +77,10 @@ function About() {
       </div>
       <div className="section-div">
         <div>
-          <h1>About</h1>
-          <p>About myself.</p>
-          <p>Read my resume.</p>
+          <h1>About myself</h1>
+          <p>{aboutMyself.one}</p>
+          <p>{aboutMyself.two}</p>
+          <a href="">Read my resume</a>
         </div>
       </div>
     </main>

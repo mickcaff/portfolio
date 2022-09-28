@@ -22,8 +22,9 @@ function SkillsTable() {
       <div className="skills-info-div">
         {text.map((item) => {
           return (
-            <div>
-              <p>{item}</p>
+            <div className="skill-point">
+            <div><i class="fa-solid fa-sm fa-terminal"></i></div>
+              <p> {item}</p>
             </div>
           );
         })}

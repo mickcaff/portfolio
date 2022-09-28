@@ -289,7 +289,7 @@ code {
   margin-bottom: 1rem;
 }
 .section-div {
-  padding: 60px 90px 50px;
+  padding: 50px 90px 100px;
   background-color: white;
 }
 .about-intro-section {
@@ -332,6 +332,7 @@ code {
   position: relative;
 }
 .copy-notice {
+  color: var(--tw-gray-5);
   position: absolute;
   top: -30px;
   left: 60px;
@@ -345,7 +346,7 @@ code {
   font-weight: 600;
 }
 .about-intro-email:hover {
-  color: var(--tw-cyan-7);
+  color: var(--tw-cyan-6);
 }
 
 
@@ -361,24 +362,43 @@ code {
   height: 32px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 2rem;
 }
 .skill-btn {
   cursor: pointer;
-  background-color: white;
-  border: none;
+  /* color: var(--tw-blue-5); */
+  background-color: var(--tw-blue-0);
+  border: 1px solid var(--tw-blue-5);
+  border-radius: 6px;
+  font-size: 1rem;
   font-weight: 600;
-  margin: 6px;
-  padding: 6px;
+  margin-right: 24px;
+  padding: 12px 14px;
 }
 .skill-btn:hover {
-  background-color: var(--tw-gray-2);
-  border-radius: 10px;
+  background-color: var(--tw-blue-1);
 }
 .active-skill-btn {
-  background-color: var(--tw-gray-2);
-  border-radius: 10px;
+  color: white;
+  background-color: var(--tw-blue-5);
+}
+.active-skill-btn:hover {
+  color: white;
+  background-color: var(--tw-blue-5);
+}
+.skills-info-div .fa-terminal {
+  color: var(--tw-cyan-6);
+  margin-right: 1.5rem;
+}
+.skills-info-div p {
+  font-size: 16px;
+}
+.skill-point {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 /* About - Myself Section */
@@ -387,12 +407,53 @@ code {
 
 /* About Contact Section */
 .footer-div {
-  background-color: var(--tw-stone-1);
-  width: 100%;
+  background-color: var(--tw-zinc-0);
+  padding: 40px 90px 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 .contact-details {
-  padding: 100px 150px 100px;
+  display: flex;
+  align-items: flex-end;
 }
+.contact-details h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.contact-details div {
+  margin-right: 3rem;
+}
+.contact-details p {
+  margin-bottom: 8px;
+}
+.contact-details p:hover {
+  cursor: pointer;
+  color: var(--tw-cyan-6);
+}
+.phone-div, .email-div {
+  position: relative;
+  width: 300px;
+}
+.phone-div .icon, .email-div .icon {
+  color: var(--tw-gray-5);
+  position: absolute;
+}
+.phone-div .icon {
+  left: 150px;
+  bottom: -7px;
+}
+.email-div .icon {
+  left: 210px;
+  bottom: -7px;
+}
+.email, .phone {
+  margin-right: 2rem;
+}
+.footer-icon {
+  margin-right: 10px;
+}
+
 
 /* Portfolio Styles */
 .folio-main {
@@ -426,32 +487,6 @@ code {
 
 
 
-
-
-
-
-
-
-/* .App{
-  color: white;
-  width: max-content;
-  margin: 200px auto;
-  display: flex;
-    flex-direction: column;
-}
-.fa-person-digging{
-  color: var(--oc-yellow-5);
-  margin: 30px;
-  align-self: center;
-}
-.App p {
-  font-size: 1.1rem;
-}
-.App a {
-  color: var(--oc-blue-2);
-  font-size: 1.1rem;
-  margin-right: 20px;
-} */
 
 
 
