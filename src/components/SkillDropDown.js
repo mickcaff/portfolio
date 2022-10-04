@@ -13,9 +13,9 @@ function SkillDropDown({ title, text }) {
       </header>
       {isDisplayed && (
         <div className="skills-info-div">
-          {text.map((item) => {
+          {text.map((item, index) => {
             return (
-              <div>
+              <div key={index}>
                 <p>{item}</p>
               </div>
             );

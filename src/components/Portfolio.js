@@ -7,8 +7,8 @@ function Portfolio() {
   return (
     <div className="folio-main">
       <h1>My Recent Work</h1>
-      <div>
-        {projects.map((project, index) => {
+      <div className='folio-projects-div'>
+        {[...projects].reverse().map((project, index) => {
           return(
             <Project key={index} {...project} />
           )

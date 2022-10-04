@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import SkillsTable from "./SkillsTable";
 import SkillsAccordian from "./SkillsAccordian";
-import { aboutMyself } from "../data/about";
+import { aboutMyself } from "../data/aboutMyself";
 import { useViewport } from "../hooks/useViewport";
+import resume from "../images/resume.pdf"
 
 function About() {
   const { width } = useViewport();
@@ -40,18 +41,18 @@ function About() {
         </div>
         <div className="about-socials-section">
           <div>
-            <i class="socials-icon fa-brands fa-xl fa-linkedin"></i>
-            <i class="socials-icon fa-brands fa-xl fa-square-github"></i>
+            <i className="socials-icon fa-brands fa-xl fa-linkedin"></i>
+            <i className="socials-icon fa-brands fa-xl fa-square-github"></i>
           </div>
           <div className="email-copy-div">
             {displayNotice && (
               <p className="copy-notice">
-                <i class="fa-solid fa-sm fa-copy"></i> Copy
+                <i className="fa-solid fa-sm fa-copy"></i> Copy
               </p>
             )}
             {displayCopied && (
               <p className="copy-notice">
-                <i class="fa-solid fa-check"></i> Copied!
+                <i className="fa-solid fa-check"></i> Copied!
               </p>
             )}
             <p
@@ -64,7 +65,7 @@ function About() {
               onMouseEnter={() => setDisplayNotice(true)}
               onMouseOut={() => setDisplayNotice(false)}
             >
-              <i class="fa-solid fa-lg fa-envelope"></i> {email}
+              <i className="fa-solid fa-lg fa-envelope"></i> {email}
             </p>
           </div>
         </div>
@@ -76,11 +77,12 @@ function About() {
         </div>
       </div>
       <div className="section-div">
-        <div>
+        <div className="about-myself-section">
           <h1>About myself</h1>
           <p>{aboutMyself.one}</p>
           <p>{aboutMyself.two}</p>
-          <a href="">Read my resume</a>
+          <p>{aboutMyself.three}</p>
+          <a href={resume} target="__blank" rel="noopener noreferrer">Read my resume</a>
         </div>
       </div>
     </main>

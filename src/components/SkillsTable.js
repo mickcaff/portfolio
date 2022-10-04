@@ -20,10 +20,12 @@ function SkillsTable() {
         })}
       </div>
       <div className="skills-info-div">
-        {text.map((item) => {
+        {text.map((item, index) => {
           return (
-            <div className="skill-point">
-            <div><i class="fa-solid fa-sm fa-terminal"></i></div>
+            <div key={index} className="skill-point">
+              <div>
+                <i className="fa-solid fa-sm fa-terminal"></i>
+              </div>
               <p> {item}</p>
             </div>
           );

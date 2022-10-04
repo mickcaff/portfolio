@@ -59,13 +59,13 @@ function Footer() {
   return (
     <footer className="footer-div">
       <div className="contact-details">
-        <div>
+        <div className="linkedin-github-div">
           <h1>Contact</h1>
           <p>
-            <i class="footer-icon fa-brands fa-linkedin"></i> linkedIn
+            <i className="footer-icon fa-brands fa-linkedin"></i> linkedIn
           </p>
           <p>
-            <i class="footer-icon fa-brands fa-square-github"></i> Github
+            <i className="footer-icon fa-brands fa-square-github"></i> Github
           </p>
         </div>
         <div className="email-phone-copy-div">
@@ -84,18 +84,18 @@ function Footer() {
                 navigator.clipboard.writeText(emailFooter)
               }}
             >
-              <i class="footer-icon fa-solid fa-envelope"></i>{" "}
+              <i className="footer-icon fa-solid fa-envelope"></i>{" "}
               {emailFooter}
             </p>
             {state.copyEmail && (
               <Notice
-                icon=<i class="fa-solid fa-sm fa-copy"></i>
+                icon=<i className="fa-solid fa-sm fa-copy"></i>
                 message="copy"
               />
             )}
             {state.tickEmail && (
               <Notice
-                icon=<i class="fa-solid fa-sm fa-check"></i>
+                icon=<i className="fa-solid fa-sm fa-check"></i>
                 message="copied!"
               />
             )}
@@ -115,27 +115,27 @@ function Footer() {
                 navigator.clipboard.writeText(phoneFooter)
               }}
             >
-              <i class="footer-icon fa-solid fa-mobile-screen-button"></i> +61
+              <i className="footer-icon fa-solid fa-mobile-screen-button"></i> +61
               414 882 927
             </p>
             {state.copyPhone && (
               <Notice
-                icon=<i class="fa-solid fa-sm fa-copy"></i>
+                icon=<i className="fa-solid fa-sm fa-copy"></i>
                 message="copy"
               />
             )}
             {state.tickPhone && (
               <Notice
-                icon=<i class="fa-solid fa-sm fa-check"></i>
+                icon=<i className="fa-solid fa-sm fa-check"></i>
                 message="copied!"
               />
             )}
           </div>
         </div>
       </div>
-      <div>
+      <div className="footer-copyright-div">
         <p>
-          <i class="fa-regular fa-sm fa-copyright"></i> {year} Mick Caffery
+          <i className="fa-regular fa-sm fa-copyright"></i> {year} Mick Caffery
         </p>
       </div>
     </footer>
