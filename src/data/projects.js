@@ -1,7 +1,6 @@
-import { SiRubyonrails } from "react-icons/si";
-
 // Screenshots taken on macbook fullscreen - without favourites bar
 // using google chrome to take screenshot of just the viewed area
+// Then resized using Preview -> width 1300px
 
 export const projects = [
   {
