@@ -227,16 +227,9 @@
 }
 body {
   color: var(--tw-gray-8);
-  font-family: "Assistant", 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: "Assistant", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
 }
 
 /* Navbar Styling */
@@ -303,8 +296,11 @@ code {
   color: var(--tw-sky-6);
   font-size: 2rem;
 }
+.span-bold {
+  font-weight: 600;
+}
 .about-intro-image {
-  background-image: url("../images/portrait2.jpg");
+  background-image: url("../images/portrait1.jpg");
   background-position: 150px -15px;
   background-size: 190px;
   height: 110px;
