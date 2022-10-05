@@ -24,15 +24,12 @@ function About() {
       <div className="section-div">
         <div className="about-intro-section">
           <div className="intro-title-text">
-            <h1>Junior Full Stack Developer</h1>
+            <h1>Junior Full-Stack Developer</h1>
             <p>
-              Hi, I'm Mick. I'm a junior full stack developer based on the
-              Sunshine Coast, Queensland.
+            Hi, I'm Mick. I'm a junior full-stack developer based on the Sunshine Coast, Queensland.
             </p>
             <p>
-              I'm <span className="span-bold">due to graduate</span> from Coder Academy's Standard
-              Full Stack Web Development Bootcamp in November 2022, and
-              currently <span className="span-bold">open to new opportunities</span>.
+              I'm <span className="span-bold">due to graduate</span> from Coder Academy's 10-month Full-Stack Web Development Bootcamp in November 2022, and currently <span className="span-bold">open to new opportunities</span>.
             </p>
           </div>
           <div className="about-intro-image"></div>
