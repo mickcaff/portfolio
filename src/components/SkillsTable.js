@@ -3,7 +3,7 @@ import { skills } from "../data/skills";
 
 function SkillsTable() {
   const [value, setValue] = useState(0);
-  const { id, title, text } = skills[value];
+  const { text } = skills[value];
   return (
     <div className="skills-table">
       <div className="skills-btn-div">

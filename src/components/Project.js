@@ -2,10 +2,8 @@ import React from "react";
 
 function Project(props) {
   const {
-    id,
     date,
     techMain,
-    techStack,
     type,
     title,
     description,
