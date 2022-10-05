@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 
-const emailFooter = "mcaffery@outlook.com"
-const phoneFooter = "+61414882927"
+const emailFooter = "mcaffery@outlook.com";
+const phoneFooter = "+61414882927";
 
 const Notice = (props) => {
   return (
@@ -12,25 +12,25 @@ const Notice = (props) => {
 };
 
 function reducer(state, action) {
-  switch(action.type) {
-    case 'OPEN-EMAIL-COPY':
-      return {...state, copyEmail: action.payload}
-    case 'CLOSE-EMAIL-COPY':
-      return {...state, copyEmail: action.payload}
-    case 'OPEN-EMAIL-TICK':
-      return {...state, tickEmail: action.payload}
-    case 'CLOSE-EMAIL-TICK':
-      return {...state, tickEmail: action.payload}
-    case 'OPEN-PHONE-COPY':
-      return {...state, copyPhone: action.payload}
-    case 'CLOSE-PHONE-COPY':
-      return {...state, copyPhone: action.payload}
-    case 'OPEN-PHONE-TICK':
-      return {...state, tickPhone: action.payload}
-    case 'CLOSE-PHONE-TICK':
-      return {...state, tickPhone: action.payload}
+  switch (action.type) {
+    case "OPEN-EMAIL-COPY":
+      return { ...state, copyEmail: action.payload };
+    case "CLOSE-EMAIL-COPY":
+      return { ...state, copyEmail: action.payload };
+    case "OPEN-EMAIL-TICK":
+      return { ...state, tickEmail: action.payload };
+    case "CLOSE-EMAIL-TICK":
+      return { ...state, tickEmail: action.payload };
+    case "OPEN-PHONE-COPY":
+      return { ...state, copyPhone: action.payload };
+    case "CLOSE-PHONE-COPY":
+      return { ...state, copyPhone: action.payload };
+    case "OPEN-PHONE-TICK":
+      return { ...state, tickPhone: action.payload };
+    case "CLOSE-PHONE-TICK":
+      return { ...state, tickPhone: action.payload };
     default:
-      return state
+      return state;
   }
 }
 
@@ -39,53 +39,64 @@ const defaultState = {
   copyEmail: false,
   tickPhone: false,
   tickEmail: false,
-}
+};
 
 function Footer() {
   const year = new Date().getFullYear();
-  const [state, dispatch] = useReducer(reducer, defaultState)
+  const [state, dispatch] = useReducer(reducer, defaultState);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if(state.tickEmail === true){
-        dispatch({type: "CLOSE-EMAIL-TICK", payload: false });
-      } else if (state.tickPhone === true){
-        dispatch({type: "CLOSE-PHONE-TICK", payload: false });
+      if (state.tickEmail === true) {
+        dispatch({ type: "CLOSE-EMAIL-TICK", payload: false });
+      } else if (state.tickPhone === true) {
+        dispatch({ type: "CLOSE-PHONE-TICK", payload: false });
       }
     }, 1500);
     return () => clearTimeout(timeout);
-  }, [state.tickEmail, state.tickPhone])
+  }, [state.tickEmail, state.tickPhone]);
 
   return (
     <footer className="footer-div">
       <div className="contact-details">
         <div className="linkedin-github-div">
           <h1>Contact</h1>
-          <p>
-            <i className="footer-icon fa-brands fa-linkedin"></i> linkedIn
-          </p>
-          <p>
-            <i className="footer-icon fa-brands fa-square-github"></i> Github
-          </p>
+          <a
+            href="https://www.linkedin.com/in/mcaffery/"
+            target="__blank"
+            rel="noopener noreferrer"
+          >
+            <p>
+              <i className="footer-icon fa-brands fa-linkedin"></i> linkedIn
+            </p>
+          </a>
+          <a
+            href="https://github.com/mickcaff"
+            target="__blank"
+            rel="noopener noreferrer"
+          >
+            <p>
+              <i className="footer-icon fa-brands fa-square-github"></i> Github
+            </p>
+          </a>
         </div>
         <div className="email-phone-copy-div">
           <div className="email-div">
             <p
               className="email"
               onMouseEnter={() =>
-                dispatch({type: "OPEN-EMAIL-COPY", payload: true })
+                dispatch({ type: "OPEN-EMAIL-COPY", payload: true })
               }
               onMouseOut={() =>
-                dispatch({type: "CLOSE-EMAIL-COPY", payload: false })
+                dispatch({ type: "CLOSE-EMAIL-COPY", payload: false })
               }
               onClick={() => {
-                dispatch({type: "CLOSE-EMAIL-COPY", payload: false });
-                dispatch({type: "OPEN-EMAIL-TICK", payload: true });
-                navigator.clipboard.writeText(emailFooter)
+                dispatch({ type: "CLOSE-EMAIL-COPY", payload: false });
+                dispatch({ type: "OPEN-EMAIL-TICK", payload: true });
+                navigator.clipboard.writeText(emailFooter);
               }}
             >
-              <i className="footer-icon fa-solid fa-envelope"></i>{" "}
-              {emailFooter}
+              <i className="footer-icon fa-solid fa-envelope"></i> {emailFooter}
             </p>
             {state.copyEmail && (
               <Notice
@@ -104,19 +115,19 @@ function Footer() {
             <p
               className="phone"
               onMouseEnter={() =>
-                dispatch({type: "OPEN-PHONE-COPY", payload: true })
+                dispatch({ type: "OPEN-PHONE-COPY", payload: true })
               }
               onMouseOut={() =>
-                dispatch({type: "CLOSE-PHONE-COPY", payload: false })
+                dispatch({ type: "CLOSE-PHONE-COPY", payload: false })
               }
               onClick={() => {
-                dispatch({type: "CLOSE-PHONE-COPY", payload: false });
-                dispatch({type: "OPEN-PHONE-TICK", payload: true });
-                navigator.clipboard.writeText(phoneFooter)
+                dispatch({ type: "CLOSE-PHONE-COPY", payload: false });
+                dispatch({ type: "OPEN-PHONE-TICK", payload: true });
+                navigator.clipboard.writeText(phoneFooter);
               }}
             >
-              <i className="footer-icon fa-solid fa-mobile-screen-button"></i> +61
-              414 882 927
+              <i className="footer-icon fa-solid fa-mobile-screen-button"></i>{" "}
+              +61 414 882 927
             </p>
             {state.copyPhone && (
               <Notice

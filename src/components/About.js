@@ -3,7 +3,7 @@ import SkillsTable from "./SkillsTable";
 import SkillsAccordian from "./SkillsAccordian";
 import { aboutMyself } from "../data/aboutMyself";
 import { useViewport } from "../hooks/useViewport";
-import resume from "../images/resume.pdf"
+import resume from "../images/resume.pdf";
 
 function About() {
   const { width } = useViewport();
@@ -41,8 +41,20 @@ function About() {
         </div>
         <div className="about-socials-section">
           <div>
-            <i className="socials-icon fa-brands fa-xl fa-linkedin"></i>
-            <i className="socials-icon fa-brands fa-xl fa-square-github"></i>
+            <a
+              href="https://www.linkedin.com/in/mcaffery/"
+              target="__blank"
+              rel="noopener noreferrer"
+            >
+              <i className="socials-icon fa-brands fa-xl fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/mickcaff"
+              target="__blank"
+              rel="noopener noreferrer"
+            >
+              <i className="socials-icon fa-brands fa-xl fa-square-github"></i>
+            </a>
           </div>
           <div className="email-copy-div">
             {displayNotice && (
@@ -82,7 +94,9 @@ function About() {
           <p>{aboutMyself.one}</p>
           <p>{aboutMyself.two}</p>
           <p>{aboutMyself.three}</p>
-          <a href={resume} target="__blank" rel="noopener noreferrer">Read my resume</a>
+          <a href={resume} target="__blank" rel="noopener noreferrer">
+            Read my resume
+          </a>
         </div>
       </div>
     </main>

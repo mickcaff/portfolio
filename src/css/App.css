@@ -242,7 +242,7 @@ code {
 /* Navbar Styling */
 .navbar {
   background-color: white;
-  box-shadow: 0 0 5px 0.5px var(--tw-slate-2);
+  /* box-shadow: 0 0 5px 0.5px var(--tw-slate-2); */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -251,9 +251,8 @@ code {
   position: relative;
 }
 .title-name {
-  /* font-family: "Roboto Slab"; */
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 20px;
 }
 .links-div {
   display: flex;
@@ -261,8 +260,7 @@ code {
 }
 .navbar-navlink {
   color: black;
-  font-size: 14px;
-  font-family: "Noto Sans";
+  font-size: 17px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -272,7 +270,7 @@ code {
 .links-div .active {
   color: var(--tw-cyan-6);
   text-decoration: underline;
-  text-underline-offset: 10px;
+  text-underline-offset: 2px;
 }
 
 /* Global Styles */
@@ -282,7 +280,7 @@ code {
   margin: 20px 0;
 }
 .about-main p {
-  font-size: 1.2rem;
+  font-size: 18px;
   margin-bottom: 1rem;
 }
 .section-div {
@@ -302,6 +300,7 @@ code {
   width: 100%;
 }
 .intro-title-text h1 {
+  color: var(--tw-sky-6);
   font-size: 2rem;
 }
 .about-intro-image {
@@ -321,8 +320,15 @@ code {
   justify-content: space-between;
   margin: 2rem 0 0;
 }
+.about-socials-section a {
+  color: var(--tw-gray-6);
+}
 .about-socials-section .socials-icon {
+  cursor: pointer;
   margin-right: 2rem;
+}
+.about-socials-section .socials-icon:hover {
+  color: var(--tw-gray-9);
 }
 .about-socials-section .fa-envelope {
   margin-right: 16px;
@@ -346,32 +352,35 @@ code {
   width: max-content;
 }
 
-
 /* About - Skills Section */
+
 .section-div:nth-of-type(2) {
   background-color: var(--tw-sky-1);
+  height: fit-content;
 }
 .skills-table {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .skills-btn-div {
   height: 32px;
-  width: 100%;
+  width: min-content;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 2rem;
 }
 .skill-btn {
   cursor: pointer;
-  background-color: var(--tw-blue-0);
+  background-color: white;
   border: 1px solid var(--tw-blue-5);
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 600;
-  margin-right: 24px;
-  padding: 12px 14px;
+  margin: 0 24px 4px 0;
+  padding: 10px 14px;
+  width: 120px;
 }
 .skill-btn:hover {
   background-color: var(--tw-blue-1);
@@ -386,29 +395,63 @@ code {
 }
 .skills-info-div .fa-terminal {
   color: var(--tw-cyan-6);
-  margin-right: 1.5rem;
+  margin-right: 1rem;
+}
+.skills-info-div {
+  margin: 1rem 0 2rem;
 }
 .skills-info-div p {
   font-size: 16px;
+}
+.skills-info-text {
+  display: flex;
+}
+.skills-info-text .fa-terminal {
+  margin-right: 0.5rem;
 }
 .skill-point {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
+.dropdown-title-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown-title-btn button {
+  color: var(--tw-cyan-6);
+  cursor: pointer;
+  background-color: var(--tw-sky-1);
+  border: none;
+}
+.dropdown-title-btn h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.dropdown-div hr {
+  margin: 14px 0;
+  border: none;
+  border-bottom: 1px solid var(--tw-gray-3);
+}
 
 /* About - Myself Section */
+
 .about-myself-section a {
   color: var(--tw-gray-8);
   display: block;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 600;
   margin-top: 2rem;
   text-decoration: underline;
-  text-underline-offset: 10px;
+  text-underline-offset: 2px;
+}
+.about-myself-section p {
+  font-size: 18px;
 }
 
 /* Portfolio Styles */
+
 .folio-main {
   background-color: var(--tw-slate-0);
   padding: 50px 0 100px;
@@ -526,6 +569,10 @@ code {
 .contact-details p {
   margin-bottom: 8px;
 }
+.linkedin-github-div a {
+  color: var(--tw-gray-8);
+  text-decoration: none;
+}
 .linkedin-github-div p:hover {
   cursor: pointer;
 }
@@ -553,6 +600,8 @@ code {
   margin-top: 40px;
 }
 
+/* Responsive Breakpoints */
+
 @media (min-width: 600px) and (max-width: 949px)  {
   .links-icons-div {
     flex-direction: row;
@@ -576,13 +625,9 @@ code {
   }
 }
 
-@media (max-width: 800px) {
-  .skills-table {
-    flex-direction: row;
-  }
-  .skills-btn-div {
-    flex-direction: column;
-    width: min-content;
+@media (min-width: 600px) {
+  .section-div:nth-of-type(2) {
+    height: 480px;
   }
 }
 
@@ -612,6 +657,24 @@ code {
     width: 155px;
     border: 5px solid var(--tw-gray-2);
     margin-right: 1rem;
+  }
+  .section-div:nth-of-type(2) {
+    height: fit-content;
+  }
+  .skills-table {
+    flex-direction: column;
+  }
+  .skills-btn-div {
+    flex-direction: row;
+    width: 100%;
+  }
+  .skill-btn {
+    margin: 0 24px 0 0;
+    padding: 12px 14px;
+    width: max-content;
+  }
+  .skills-info-div .fa-terminal {
+    margin-right: 1.5rem;
   }
 }
 

@@ -24,7 +24,7 @@ function SkillsTable() {
           return (
             <div key={index} className="skill-point">
               <div>
-                <i className="fa-solid fa-sm fa-terminal"></i>
+                <i className="fa-solid fa-xs fa-terminal"></i>
               </div>
               <p> {item}</p>
             </div>
