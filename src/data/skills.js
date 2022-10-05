@@ -47,7 +47,8 @@ export const skills = [
     id: 5,
     title: "MERN",
     text: [
-      "Our Bootcamp team cap-stone project will be a full-stack MERN application due to be completed in late November 2022. We will be learning about MongoDB, Express, Node and Axios over the coming weeks.",
+      "The cap-stone team project for the Bootcamp will be a full-stack MERN application due to be completed in late November 2022. We will be learning about MongoDB, Express, Node and Axios over the coming weeks.",
+      "The team project will also aim to improve our Git & source control skills, as we collaborate with team members across Australia.",
       "I look forward to updating my portfolio with our team's project and other MERN side projects that I am currently working on.",
     ],
   },
