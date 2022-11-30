@@ -26,10 +26,11 @@ function About() {
           <div className="intro-title-text">
             <h1>Junior Full-Stack Developer</h1>
             <p>
-            Hi, I'm Mick. I'm a junior full-stack developer based on the Sunshine Coast, Queensland.
-            </p>
-            <p>
-              I'm <span className="span-bold">due to graduate</span> from Coder Academy's 10-month Full-Stack Web Development Bootcamp in November 2022, and currently <span className="span-bold">open to new opportunities</span>.
+              Hi, I'm Mick. I'm a junior full-stack developer{" "}
+              <span className="span-bold">due to graduate</span> from Coder
+              Academy's 10-month Full-Stack Web Development Bootcamp in December
+              2022, and currently{" "}
+              <span className="span-bold">open to new opportunities</span>.
             </p>
           </div>
           <div className="about-intro-image"></div>
@@ -88,7 +89,6 @@ function About() {
           <h1>About myself</h1>
           <p>{aboutMyself.one}</p>
           <p>{aboutMyself.two}</p>
-          <p>{aboutMyself.three}</p>
           <a href={resume} target="__blank" rel="noopener noreferrer">
             Read my resume
           </a>
