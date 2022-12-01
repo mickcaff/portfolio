@@ -3,7 +3,7 @@ import SkillsTable from "./SkillsTable";
 import SkillsAccordian from "./SkillsAccordian";
 import { aboutMyself } from "../data/aboutMyself";
 import { useViewport } from "../hooks/useViewport";
-import resume from "../images/resume.pdf";
+// import resume from "../images/resume.pdf";
 
 function About() {
   const { width } = useViewport();
