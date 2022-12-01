@@ -89,9 +89,9 @@ function About() {
           <h1>About myself</h1>
           <p>{aboutMyself.one}</p>
           <p>{aboutMyself.two}</p>
-          <a href={resume} target="__blank" rel="noopener noreferrer">
+          {/* <a href={resume} target="__blank" rel="noopener noreferrer">
             Read my resume
-          </a>
+          </a> */}
         </div>
       </div>
     </main>
